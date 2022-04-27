@@ -1,7 +1,15 @@
 # StopLimitOrderWrapper
 
+## Deploy
 ```
 npx hardhat --network avalanche run scripts/deploy.js
+```
+
+## Test with mainnet fork
+
+```
+npx hardhat node --show-accounts --no-deploy
+npx hardhat --network localhost test ./test/chainlinkOracleV1.js
 ```
 
 Try running some of the following tasks:

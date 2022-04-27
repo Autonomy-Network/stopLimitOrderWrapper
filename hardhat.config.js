@@ -19,10 +19,26 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
+  defaultNetwork: "hardhat",
   solidity: "0.8.6",
   networks: {
+    localhost: {
+      url: "http://127.0.0.1:8545",
+      saveDeployments: true,
+    },
+    hardhat: {
+      forking: {
+        url: process.env.AVAX_RPC_PROVIDER_URI,
+        // blockNumber: 12802046,
+      },
+      mining: {
+        auto: true,
+        // interval: 0,
+      },
+      timeout: 200000000
+    },
     avalanche: {
-      url: "https://api.avax.network/ext/bc/C/rpc", 
+      url: process.env.AVAX_RPC_PROVIDER_URI, 
       chainId: 43114,
       gasPrice: "auto",
       accounts: [process.env.PRIVATE_KEY]
