@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./IOracle.sol";
+import "./IChainLinkPriceOracle.sol";
 
 struct OrderArgs {
     address maker; 
@@ -11,7 +11,7 @@ struct OrderArgs {
     uint256 startTime;
     uint256 endTime;
     uint256 stopPrice;
-    IOracle oracleAddress;
+    IChainLinkPriceOracle oracleAddress;
     bytes oracleData;
     uint256 amountToFill;
     uint8 v; 

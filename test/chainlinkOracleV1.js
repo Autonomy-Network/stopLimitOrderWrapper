@@ -8,7 +8,7 @@ const testOracleData = "0x000000000000000000000000ebe676ee90fe1112671f19b6b7459b
 describe("Oracle peek()", function () {
     it("Should return valid price feed", async () => {
         provider = await ethers.getDefaultProvider("http://localhost:8545");
-        chainlinkV1Contract= await ethers.getContractAt("IOracle", ChainLinkV1Address)
+        chainlinkV1Contract= await ethers.getContractAt("IChainLinkPriceOracle", ChainLinkV1Address)
 
         oracleData = defaultAbiCoder.encode(
             ['address', 'address', 'uint256'], // multiply, divide, decimals

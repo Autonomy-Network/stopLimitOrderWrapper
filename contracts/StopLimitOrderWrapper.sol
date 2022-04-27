@@ -1,8 +1,8 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-import "./interfaces/IStopLimitOrder.sol";
-import "./interfaces/IBentoBox.sol";
+import "../interfaces/IStopLimitOrder.sol";
+import "../interfaces/IBentoBoxV1.sol";
 
 contract StopLimitOrderWrapper{
     IBentoBoxV1 public immutable bentoBox;
