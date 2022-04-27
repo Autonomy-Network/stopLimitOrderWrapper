@@ -18,6 +18,12 @@ contract StopLimitOrderWrapper{
         address stopLimitOrderContract_,
         address WETH_
     ) {
+        require(registry_ != address(0), "Invalid registry");
+        require(gasFeeForwarder_ != address(0), "Invalid gasForwarder");
+        require(bentoBox_ != address(0), "Invalid BentoBox");
+        require(stopLimitOrderContract_ != address(0), "Invalid stopLimitOrder");
+        require(WETH_ != address(0), "Invalid WETH");
+
         registry = registry_;
         gasFeeForwarder = gasFeeForwarder_;
         bentoBox = IBentoBoxV1(bentoBox_);

@@ -1,5 +1,9 @@
 # StopLimitOrderWrapper
 
+```
+npx hardhat --network avalanche run scripts/deploy.js
+```
+
 Try running some of the following tasks:
 
 ```shell
