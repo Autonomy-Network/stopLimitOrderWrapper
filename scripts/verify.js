@@ -12,7 +12,8 @@ async function main() {
             process.env.GAS_FEE_FORWARDER_ADDRESS,
             process.env.BENTO_BOX_ADDRESS,
             process.env.STOP_LIMIT_ORDER_CONTRACT_ADDRESS,
-            process.env.WETH_ADDRESS
+            process.env.WETH_ADDRESS,
+            process.env.UNI_V2_ROUTER_ADDRESS
           ]
         });
     } catch (e) {
