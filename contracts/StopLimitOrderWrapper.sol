@@ -99,7 +99,7 @@ contract StopLimitOrderWrapper{
             address[] memory routePath = new address[](2);
             routePath[0] = tokenOut;
             routePath[1] = WETH;
-            uni.swapTokensForExactETH(
+            uni.swapTokensForExactAVAX(
                 feeAmount, // amountOut
                 _feeReceivedAmount, // amountInMax
                 routePath, // path
