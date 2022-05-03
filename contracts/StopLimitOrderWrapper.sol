@@ -72,7 +72,8 @@ contract StopLimitOrderWrapper{
                 0 // share
             );
 
-            _feeReceivedAsShare = bentoBox.balanceOf(tokenOut, address(this));
+            /// @dev transfer residue amount to maker
+            _feeReceivedAsShare = bentoBox.balanceOf(WETH, address(this));
             if (_feeReceivedAsShare > 0) {
                 bentoBox.transfer(
                     WETH,
