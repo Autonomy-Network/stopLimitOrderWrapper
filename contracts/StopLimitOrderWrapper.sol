@@ -114,9 +114,9 @@ contract StopLimitOrderWrapper{
                     _tokenOut.approve(address(bentoBox), MAX_UINT);
                 }
                 bentoBox.deposit(
-                    address(tokenOut),
+                    tokenOut,
                     address(this),
-                    address(order.maker),
+                    order.maker,
                     leftTokenOut,
                     0
                 );
