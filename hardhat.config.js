@@ -43,6 +43,12 @@ module.exports = {
       chainId: 43114,
       gasPrice: "auto",
       accounts: [process.env.PRIVATE_KEY]
+    },
+    polygon: {
+      url: process.env.POLYGON_RPC_PROVIDER_URI, 
+      chainId: 137,
+      gasPrice: "auto",
+      accounts: [process.env.PRIVATE_KEY]
     }
   },
   etherscan: {
