@@ -44,6 +44,12 @@ module.exports = {
       gasPrice: "auto",
       accounts: [process.env.PRIVATE_KEY]
     },
+    fantom: {
+      url: process.env.FANTOM_RPC_PROVIDER_URI, 
+      chainId: 250,
+      gasPrice: "auto",
+      accounts: [process.env.PRIVATE_KEY]
+    },
     avalanche: {
       url: process.env.AVAX_RPC_PROVIDER_URI, 
       chainId: 43114,
