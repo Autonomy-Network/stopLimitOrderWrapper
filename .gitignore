@@ -1,6 +1,7 @@
 node_modules
 .env
 .env.avax
+.env.matic
 coverage
 coverage.json
 typechain

@@ -38,6 +38,12 @@ module.exports = {
       },
       timeout: 200000000
     },
+    ethereum: {
+      url: process.env.ETHEREUM_RPC_PROVIDER_URI, 
+      chainId: 1,
+      gasPrice: "auto",
+      accounts: [process.env.PRIVATE_KEY]
+    },
     avalanche: {
       url: process.env.AVAX_RPC_PROVIDER_URI, 
       chainId: 43114,
